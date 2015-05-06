@@ -57,11 +57,25 @@ class CitiesController extends AppController {
 			}
 		}
                  $countries = $this->City->Country->find('list');
-                 $states = $this->City->State->find('list') ;
+                // $country_id = 1;
+                 $states = $this->City->State->find('list', array(
+                                                   //'conditions' => array('State.id' => $country_id),
+                                                   'fields'=>array('id','state'),
+                                                   'recursive' => -1
+                                                   ));
 		$this->set(compact('countries'));
 	        $this->set(compact('states'));
 
 	}
+
+
+        //public function get_by_country($id=null) {
+        //$country_id = $this->request->data['Country']['country_id'];
+ 
+
+
+
+
 
 /**
  * edit method
