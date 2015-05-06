@@ -29,7 +29,7 @@ Router::connect('/', array('controller' => 'Homes', 'action' => 'index', 'home')
 
 Router::connect('/login', array('plugin'=>'authake','controller' => 'user', 'action' => 'login'));
 
-	Router::connect('/pages', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
  */
