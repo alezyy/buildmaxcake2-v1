@@ -106,4 +106,23 @@ class StatesController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+
+
+      public function getByState() {
+
+       $country_id = $this->request->data['City']['country_id'];
+      
+       // $country_id = 1 ;
+ 
+	$states = $this->State->find('list', array(
+	'conditions' => array('State.country_id' => $country_id),
+        'fields'=>array('id','state'),
+	'recursive' => -1
+	));
+ 
+	$this->set('states',$states);
+	$this->layout = 'ajax';
+	}
+
+
 }

@@ -1,3 +1,4 @@
+
 <?php
 App::uses('AppController', 'Controller');
 /**
@@ -9,12 +10,15 @@ App::uses('AppController', 'Controller');
  */
 class CitiesController extends AppController {
 
+	public $helpers = array('Js');
+
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator', 'Session');
+	public $components = array('Paginator', 'RequestHandler','Session');
+   
 
 /**
  * index method
@@ -56,26 +60,35 @@ class CitiesController extends AppController {
 				$this->Session->setFlash(__('The city could not be saved. Please, try again.'));
 			}
 		}
-                 $countries = $this->City->Country->find('list');
-                 $country_id = 1;
-                 $states = $this->City->State->find('list', array(
-                                                   'conditions' => array('State.id' => $country_id),
+
+
+               /* $subcategories = $this->Post->Subcategory->find('list');
+                $categories = $this->Post->Subcategory->Category->find('list');
+                $this->set(compact('subcategories','categories'));
+                 */
+             
+ $states = $this->City->State->find('list', array('fields'=>array 	
+                                                     ('id','state'),
+                                                   'recursive' => -1));
+
+                $countries = $this->City->State->Country->find('list');
+                
+             /*  
+              $states = $this->City->State->find('list', array(
+                                       //'conditions' => array('State.id' => $country_id),
                                                    'fields'=>array('id','state'),
                                                    'recursive' => -1
-                                                   ));
+                                                   )); */
+
+
 		$this->set(compact('countries'));
 	        $this->set(compact('states'));
+                $this->layout = 'city';
+	        //$this->layout = 'ajax'; 
 
-	}
+         }
 
-
-        //public function get_by_country($id=null) {
-        //$country_id = $this->request->data['Country']['country_id'];
- 
-
-
-
-
+   
 
 /**
  * edit method
