@@ -66,9 +66,9 @@
 			<?php echo h($applicationsLease['ApplicationsLease']['security_deposit_date']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Status'); ?></dt>
+		<dt><?php echo __('Status Id'); ?></dt>
 		<dd>
-			<?php echo h($applicationsLease['ApplicationsLease']['status']); ?>
+			<?php echo h($applicationsLease['ApplicationsLease']['status_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Notes'); ?></dt>
@@ -79,6 +79,16 @@
 		<dt><?php echo __('Agreement'); ?></dt>
 		<dd>
 			<?php echo h($applicationsLease['ApplicationsLease']['agreement']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
+			<?php echo h($applicationsLease['ApplicationsLease']['created']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
+			<?php echo h($applicationsLease['ApplicationsLease']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>

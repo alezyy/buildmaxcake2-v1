@@ -15,7 +15,7 @@
 		echo $this->Form->input('rent_mount');
 		echo $this->Form->input('security_deposit');
 		echo $this->Form->input('security_deposit_date');
-		echo $this->Form->input('status');
+		echo $this->Form->input('status_id');
 		echo $this->Form->input('notes');
 		echo $this->Form->input('agreement');
 	?>

@@ -29,6 +29,8 @@ class RentalOwnerFixture extends CakeTestFixture {
 		'zip' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 20, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'comments' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'photo' => array('type' => 'binary', 'null' => true, 'default' => null),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -48,7 +50,7 @@ class RentalOwnerFixture extends CakeTestFixture {
 			'gender_id' => 1,
 			'id_government' => 'Lorem ipsum dolor sit a',
 			'company_name' => 'Lorem ipsum dolor sit amet',
-			'date_of_birth' => '2015-05-07',
+			'date_of_birth' => '2015-05-08',
 			'primary_email' => 'Lorem ipsum dolor sit amet',
 			'alternate_email' => 'Lorem ipsum dolor sit amet',
 			'phone' => 'Lorem ipsum dolor sit amet',
@@ -59,7 +61,9 @@ class RentalOwnerFixture extends CakeTestFixture {
 			'city' => 'Lorem ipsum dolor sit amet',
 			'zip' => 'Lorem ipsum dolor ',
 			'comments' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'photo' => 'Lorem ipsum dolor sit amet'
+			'photo' => 'Lorem ipsum dolor sit amet',
+			'created' => '2015-05-08 13:25:40',
+			'modified' => '2015-05-08 13:25:40'
 		),
 	);
 

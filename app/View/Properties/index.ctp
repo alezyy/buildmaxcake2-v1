@@ -6,9 +6,10 @@
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('property_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('number_of_units'); ?></th>
+			<th><?php echo $this->Paginator->sort('propertiestype_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('propertiestypes_specification_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('rental_owner_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('operating_account'); ?></th>
+			<th><?php echo $this->Paginator->sort('operating_account_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('property_reserve'); ?></th>
 			<th><?php echo $this->Paginator->sort('rental_amount'); ?></th>
 			<th><?php echo $this->Paginator->sort('deposit_amount'); ?></th>
@@ -18,7 +19,10 @@
 			<th><?php echo $this->Paginator->sort('street'); ?></th>
 			<th><?php echo $this->Paginator->sort('City'); ?></th>
 			<th><?php echo $this->Paginator->sort('zip'); ?></th>
+			<th><?php echo $this->Paginator->sort('description'); ?></th>
 			<th><?php echo $this->Paginator->sort('photo'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -28,9 +32,10 @@
 		<td><?php echo h($property['Property']['id']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['property_name']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['number_of_units']); ?>&nbsp;</td>
+		<td><?php echo h($property['Property']['propertiestype_id']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['propertiestypes_specification_id']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['rental_owner_id']); ?>&nbsp;</td>
-		<td><?php echo h($property['Property']['operating_account']); ?>&nbsp;</td>
+		<td><?php echo h($property['Property']['operating_account_id']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['property_reserve']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['rental_amount']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['deposit_amount']); ?>&nbsp;</td>
@@ -40,7 +45,10 @@
 		<td><?php echo h($property['Property']['street']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['City']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['zip']); ?>&nbsp;</td>
+		<td><?php echo h($property['Property']['description']); ?>&nbsp;</td>
 		<td><?php echo h($property['Property']['photo']); ?>&nbsp;</td>
+		<td><?php echo h($property['Property']['created']); ?>&nbsp;</td>
+		<td><?php echo h($property['Property']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $property['Property']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $property['Property']['id'])); ?>

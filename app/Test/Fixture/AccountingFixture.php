@@ -14,6 +14,8 @@ class AccountingFixture extends CakeTestFixture {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false, 'key' => 'primary'),
 		'tenant_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'payment_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
+		'created' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
+		'modified' => array('type' => 'integer', 'null' => true, 'default' => null, 'unsigned' => false),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -29,7 +31,9 @@ class AccountingFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'tenant_id' => 1,
-			'payment_id' => 1
+			'payment_id' => 1,
+			'created' => 1,
+			'modified' => 1
 		),
 	);
 

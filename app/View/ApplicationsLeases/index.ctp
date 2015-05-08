@@ -16,9 +16,11 @@
 			<th><?php echo $this->Paginator->sort('rent_mount'); ?></th>
 			<th><?php echo $this->Paginator->sort('security_deposit'); ?></th>
 			<th><?php echo $this->Paginator->sort('security_deposit_date'); ?></th>
-			<th><?php echo $this->Paginator->sort('status'); ?></th>
+			<th><?php echo $this->Paginator->sort('status_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('notes'); ?></th>
 			<th><?php echo $this->Paginator->sort('agreement'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -38,9 +40,11 @@
 		<td><?php echo h($applicationsLease['ApplicationsLease']['rent_mount']); ?>&nbsp;</td>
 		<td><?php echo h($applicationsLease['ApplicationsLease']['security_deposit']); ?>&nbsp;</td>
 		<td><?php echo h($applicationsLease['ApplicationsLease']['security_deposit_date']); ?>&nbsp;</td>
-		<td><?php echo h($applicationsLease['ApplicationsLease']['status']); ?>&nbsp;</td>
+		<td><?php echo h($applicationsLease['ApplicationsLease']['status_id']); ?>&nbsp;</td>
 		<td><?php echo h($applicationsLease['ApplicationsLease']['notes']); ?>&nbsp;</td>
 		<td><?php echo h($applicationsLease['ApplicationsLease']['agreement']); ?>&nbsp;</td>
+		<td><?php echo h($applicationsLease['ApplicationsLease']['created']); ?>&nbsp;</td>
+		<td><?php echo h($applicationsLease['ApplicationsLease']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $applicationsLease['ApplicationsLease']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $applicationsLease['ApplicationsLease']['id'])); ?>

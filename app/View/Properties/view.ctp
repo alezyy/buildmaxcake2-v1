@@ -16,6 +16,11 @@
 			<?php echo h($property['Property']['number_of_units']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Propertiestype Id'); ?></dt>
+		<dd>
+			<?php echo h($property['Property']['propertiestype_id']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Propertiestypes Specification Id'); ?></dt>
 		<dd>
 			<?php echo h($property['Property']['propertiestypes_specification_id']); ?>
@@ -26,9 +31,9 @@
 			<?php echo h($property['Property']['rental_owner_id']); ?>
 			&nbsp;
 		</dd>
-		<dt><?php echo __('Operating Account'); ?></dt>
+		<dt><?php echo __('Operating Account Id'); ?></dt>
 		<dd>
-			<?php echo h($property['Property']['operating_account']); ?>
+			<?php echo h($property['Property']['operating_account_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Property Reserve'); ?></dt>
@@ -76,9 +81,24 @@
 			<?php echo h($property['Property']['zip']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('Description'); ?></dt>
+		<dd>
+			<?php echo h($property['Property']['description']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Photo'); ?></dt>
 		<dd>
 			<?php echo h($property['Property']['photo']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
+			<?php echo h($property['Property']['created']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
+			<?php echo h($property['Property']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>

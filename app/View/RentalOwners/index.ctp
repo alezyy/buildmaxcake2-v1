@@ -21,6 +21,8 @@
 			<th><?php echo $this->Paginator->sort('zip'); ?></th>
 			<th><?php echo $this->Paginator->sort('comments'); ?></th>
 			<th><?php echo $this->Paginator->sort('photo'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	</thead>
@@ -45,6 +47,8 @@
 		<td><?php echo h($rentalOwner['RentalOwner']['zip']); ?>&nbsp;</td>
 		<td><?php echo h($rentalOwner['RentalOwner']['comments']); ?>&nbsp;</td>
 		<td><?php echo h($rentalOwner['RentalOwner']['photo']); ?>&nbsp;</td>
+		<td><?php echo h($rentalOwner['RentalOwner']['created']); ?>&nbsp;</td>
+		<td><?php echo h($rentalOwner['RentalOwner']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $rentalOwner['RentalOwner']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $rentalOwner['RentalOwner']['id'])); ?>

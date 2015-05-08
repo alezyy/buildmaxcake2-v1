@@ -24,9 +24,11 @@ class ApplicationsLeaseFixture extends CakeTestFixture {
 		'rent_mount' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 40, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'security_deposit' => array('type' => 'decimal', 'null' => true, 'default' => null, 'length' => 15, 'unsigned' => false),
 		'security_deposit_date' => array('type' => 'date', 'null' => true, 'default' => null),
-		'status' => array('type' => 'string', 'null' => false, 'default' => 'Application', 'length' => 40, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'status_id' => array('type' => 'integer', 'null' => false, 'default' => null, 'unsigned' => false),
 		'notes' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'agreement' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 40, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
@@ -45,17 +47,19 @@ class ApplicationsLeaseFixture extends CakeTestFixture {
 			'property_id' => 1,
 			'unit_id' => 1,
 			'leasestype_id' => 1,
-			'start_date' => '2015-05-07',
-			'end_date' => '2015-05-07',
+			'start_date' => '2015-05-08',
+			'end_date' => '2015-05-08',
 			'automatically_end_the_lease' => 1,
 			'recurringcharge_id' => 1,
-			'next_due_date' => '2015-05-07',
+			'next_due_date' => '2015-05-08',
 			'rent_mount' => 'Lorem ipsum dolor sit amet',
 			'security_deposit' => '',
-			'security_deposit_date' => '2015-05-07',
-			'status' => 'Lorem ipsum dolor sit amet',
+			'security_deposit_date' => '2015-05-08',
+			'status_id' => 1,
 			'notes' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-			'agreement' => 'Lorem ipsum dolor sit amet'
+			'agreement' => 'Lorem ipsum dolor sit amet',
+			'created' => '2015-05-08 13:49:30',
+			'modified' => '2015-05-08 13:49:30'
 		),
 	);
 
