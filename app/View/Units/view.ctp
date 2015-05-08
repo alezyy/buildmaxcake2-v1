@@ -1,104 +1,164 @@
 <div class="units view">
-<h2><?php echo __('Unit'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><?php echo __('Unit'); ?></h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-3">
+			<div class="actions">
+				<div class="panel panel-default">
+					<div class="panel-heading">Actions</div>
+						<div class="panel-body">
+							<ul class="nav nav-pills nav-stacked">
+									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>&nbsp&nbsp;Edit Unit'), array('action' => 'edit', $unit['Unit']['id']), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete Unit'), array('action' => 'delete', $unit['Unit']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $unit['Unit']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Units'), array('action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Unit'), array('action' => 'add'), array('escape' => false)); ?> </li>
+							</ul>
+						</div><!-- end body -->
+				</div><!-- end panel -->
+			</div><!-- end actions -->
+		</div><!-- end col md 3 -->
+
+		<div class="col-md-9">			
+			<table cellpadding="0" cellspacing="0" class="table table-striped">
+				<tbody>
+				<tr>
+		<th><?php echo __('Id'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Property Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Property Id'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['property_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Rental Owner Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Rental Owner Id'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['rental_owner_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Unit Number'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Unit Number'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['unit_number']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Size Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Size Id'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['size_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Market Rent'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Market Rent'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['market_rent']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Bedrooms'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Bedrooms'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['bedrooms']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Bath'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Bath'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['bath']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Lease Term'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Lease Term'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['lease_term']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Leasestype Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Leasestype Id'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['leasestype_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Rental Amount'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Rental Amount'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['rental_amount']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Deposit Amount'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Deposit Amount'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['deposit_amount']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Description'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Description'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['description']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Features'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Features'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['features']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Photo'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Photo'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['photo']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Status Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Status Id'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['status_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Created'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['created']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Modified'); ?></th>
+		<td>
 			<?php echo h($unit['Unit']['modified']); ?>
 			&nbsp;
-		</dd>
-	</dl>
+		</td>
+</tr>
+				</tbody>
+			</table>
+
+		</div><!-- end col md 9 -->
+
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Unit'), array('action' => 'edit', $unit['Unit']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Unit'), array('action' => 'delete', $unit['Unit']['id']), array(), __('Are you sure you want to delete # %s?', $unit['Unit']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Units'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Unit'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+

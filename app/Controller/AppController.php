@@ -43,6 +43,7 @@ class AppController extends Controller {
    var $counter = 0;
     function beforeFilter(){
         $this->auth();
+         $this->layout = 'bootstrap';
     }
 
      private function auth(){
