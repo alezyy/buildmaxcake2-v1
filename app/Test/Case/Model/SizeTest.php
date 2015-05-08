@@ -1,11 +1,11 @@
 <?php
-App::uses('State', 'Model');
+App::uses('Size', 'Model');
 
 /**
- * State Test Case
+ * Size Test Case
  *
  */
-class StateTest extends CakeTestCase {
+class SizeTest extends CakeTestCase {
 
 /**
  * Fixtures
@@ -13,7 +13,7 @@ class StateTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.state'
+		'app.size'
 	);
 
 /**
@@ -23,7 +23,7 @@ class StateTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->State = ClassRegistry::init('State');
+		$this->Size = ClassRegistry::init('Size');
 	}
 
 /**
@@ -32,7 +32,7 @@ class StateTest extends CakeTestCase {
  * @return void
  */
 	public function tearDown() {
-		unset($this->State);
+		unset($this->Size);
 
 		parent::tearDown();
 	}

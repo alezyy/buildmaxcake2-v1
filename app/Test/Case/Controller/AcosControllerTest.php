@@ -1,11 +1,11 @@
 <?php
-App::uses('StatesController', 'Controller');
+App::uses('AcosController', 'Controller');
 
 /**
- * StatesController Test Case
+ * AcosController Test Case
  *
  */
-class StatesControllerTest extends ControllerTestCase {
+class AcosControllerTest extends ControllerTestCase {
 
 /**
  * Fixtures
@@ -13,7 +13,9 @@ class StatesControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.state'
+		'app.aco',
+		'app.aro',
+		'app.permission'
 	);
 
 /**

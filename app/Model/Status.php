@@ -1,16 +1,16 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * State Model
+ * Status Model
  *
  */
-class State extends AppModel {
+class Status extends AppModel {
 
 /**
  * Display field
  *
  * @var string
  */
-	public $displayField = 'country_id';
+	public $displayField = 'id';
 
 }
