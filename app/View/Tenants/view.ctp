@@ -1,174 +1,262 @@
 <div class="tenants view">
-<h2><?php echo __('Tenant'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><?php echo __('Tenant'); ?></h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-3">
+			<div class="actions">
+				<div class="panel panel-default">
+					<div class="panel-heading">Actions</div>
+						<div class="panel-body">
+							<ul class="nav nav-pills nav-stacked">
+									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>&nbsp&nbsp;Edit Tenant'), array('action' => 'edit', $tenant['Tenant']['id']), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete Tenant'), array('action' => 'delete', $tenant['Tenant']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $tenant['Tenant']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Tenants'), array('action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Tenant'), array('action' => 'add'), array('escape' => false)); ?> </li>
+							</ul>
+						</div><!-- end body -->
+				</div><!-- end panel -->
+			</div><!-- end actions -->
+		</div><!-- end col md 3 -->
+
+		<div class="col-md-9">			
+			<table cellpadding="0" cellspacing="0" class="table table-striped">
+				<tbody>
+				<tr>
+		<th><?php echo __('Id'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('First Name'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('First Name'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['first_name']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Last Name'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Last Name'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['last_name']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Gender Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Gender Id'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['gender_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Marital Status Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Marital Status Id'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['marital_status_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Email'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Email'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['email']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Alternate Emails'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Alternate Emails'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['alternate emails']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Cell Phone'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Cell Phone'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['cell_phone']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Home Phone'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Home Phone'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['home_phone']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Work Phone'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Work Phone'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['work_phone']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Fax'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Fax'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['fax']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Country Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Country Id'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['country_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('State Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('State Id'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['state_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Street'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Street'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['street']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('City'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('City'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['City']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Zip'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Zip'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['zip']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Birth Date'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Birth Date'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['birth_date']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Driver License Number'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Driver License Number'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['driver_license_number']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Driver License State'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Driver License State'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['driver_license_state']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Total Number Of Occupants'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Total Number Of Occupants'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['total_number_of_occupants']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Unit Or Address Applying For'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Unit Or Address Applying For'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['unit_or_address_applying_for']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Requested Lease Term'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Requested Lease Term'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['requested_lease_term']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Status Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Status Id'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['status_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Emergency Contact'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Emergency Contact'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['emergency_contact']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Emergency Contact Email'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Emergency Contact Email'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['emergency_contact_email']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Emergency Contact Phone'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Emergency Contact Phone'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['emergency_contact_phone']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Relationship To Tenant'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Relationship To Tenant'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['relationship_to_tenant']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Co Signer Details'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Co Signer Details'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['co_signer_details']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Notes'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Notes'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['notes']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Photo'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Photo'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['photo']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Created'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['created']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Modified'); ?></th>
+		<td>
 			<?php echo h($tenant['Tenant']['modified']); ?>
 			&nbsp;
-		</dd>
-	</dl>
+		</td>
+</tr>
+				</tbody>
+			</table>
+
+		</div><!-- end col md 9 -->
+
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Tenant'), array('action' => 'edit', $tenant['Tenant']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Tenant'), array('action' => 'delete', $tenant['Tenant']['id']), array(), __('Are you sure you want to delete # %s?', $tenant['Tenant']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Tenants'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Tenant'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+

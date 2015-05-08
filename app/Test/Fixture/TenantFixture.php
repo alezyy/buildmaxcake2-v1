@@ -73,7 +73,7 @@ class TenantFixture extends CakeTestFixture {
 			'street' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'City' => 'Lorem ipsum d',
 			'zip' => 1,
-			'birth_date' => '2015-05-07',
+			'birth_date' => '2015-05-08',
 			'driver_license_number' => 'Lorem ipsum d',
 			'driver_license_state' => 'Lorem ipsum d',
 			'total_number_of_occupants' => 'Lorem ipsum d',
@@ -87,8 +87,8 @@ class TenantFixture extends CakeTestFixture {
 			'co_signer_details' => 'Lorem ipsum dolor sit amet',
 			'notes' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'photo' => 'Lorem ipsum dolor sit amet',
-			'created' => '2015-05-07 22:45:32',
-			'modified' => '2015-05-07 22:45:32'
+			'created' => '2015-05-08 15:38:34',
+			'modified' => '2015-05-08 15:38:34'
 		),
 	);
 

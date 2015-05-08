@@ -50,10 +50,10 @@ class TenantsController extends AppController {
 		if ($this->request->is('post')) {
 			$this->Tenant->create();
 			if ($this->Tenant->save($this->request->data)) {
-				$this->Session->setFlash(__('The tenant has been saved.'));
+				$this->Session->setFlash(__('The tenant has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The tenant could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The tenant could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
 	}
@@ -71,10 +71,10 @@ class TenantsController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->Tenant->save($this->request->data)) {
-				$this->Session->setFlash(__('The tenant has been saved.'));
+				$this->Session->setFlash(__('The tenant has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The tenant could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The tenant could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('Tenant.' . $this->Tenant->primaryKey => $id));
@@ -94,11 +94,11 @@ class TenantsController extends AppController {
 		if (!$this->Tenant->exists()) {
 			throw new NotFoundException(__('Invalid tenant'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		$this->request->onlyAllow('post', 'delete');
 		if ($this->Tenant->delete()) {
-			$this->Session->setFlash(__('The tenant has been deleted.'));
+			$this->Session->setFlash(__('The tenant has been deleted.'), 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The tenant could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The tenant could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
