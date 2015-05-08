@@ -47,6 +47,8 @@
 			<?php echo $this->fetch('content'); ?>
 
     </div><!-- /.container -->
+     <?php echo $this->Html->script('//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js');
+     echo $this->Js->writeBuffer(); ?>
 
   </body>
 </html>

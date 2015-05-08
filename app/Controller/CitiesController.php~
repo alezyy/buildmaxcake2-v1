@@ -1,4 +1,3 @@
-
 <?php
 App::uses('AppController', 'Controller');
 /**
@@ -10,15 +9,16 @@ App::uses('AppController', 'Controller');
  */
 class CitiesController extends AppController {
 
-	public $helpers = array('Js');
+	public $helpers = array('Js','Form','Html');
+	
+	
 
 /**
  * Components
  *
  * @var array
  */
-	public $components = array('Paginator', 'RequestHandler','Session');
-   
+	public $components = array('Paginator', 'RequestHandler', 'Session');
 
 /**
  * index method
@@ -54,41 +54,35 @@ class CitiesController extends AppController {
 		if ($this->request->is('post')) {
 			$this->City->create();
 			if ($this->City->save($this->request->data)) {
-				$this->Session->setFlash(__('The city has been saved.'));
+				$this->Session->setFlash(__('The city has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The city could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The city could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		}
-
-
-               /* $subcategories = $this->Post->Subcategory->find('list');
-                $categories = $this->Post->Subcategory->Category->find('list');
-                $this->set(compact('subcategories','categories'));
-                 */
-             
- $states = $this->City->State->find('list', array('fields'=>array 	
+		
+		/*$states = $this->City->State->find('list', array('fields'=>array 	
                                                      ('id','state'),
-                                                   'recursive' => -1));
+                                                   'recursive' => -1)); */
 
-                $countries = $this->City->State->Country->find('list');
+              //  $countries = $this->City->State->Country->find('list');
+
+		// $countries = $this->City->Country->find('list');
+		
+				$this->loadModel('Country');         
+	                        $this->loadModel('State');
+
+                $this->set('countries', $this->Country->find('list')); 
+
+                $this->set('states', $this->State->find('list', array('fields'=>array('id','state'),
+                                                                       'recursive' => -1)));  
+	           
+
                 
-             /*  
-              $states = $this->City->State->find('list', array(
-                                       //'conditions' => array('State.id' => $country_id),
-                                                   'fields'=>array('id','state'),
-                                                   'recursive' => -1
-                                                   )); */
+	     //   $this->set(compact('states'));
+              //  $this->layout = 'city';
 
-
-		$this->set(compact('countries'));
-	        $this->set(compact('states'));
-                $this->layout = 'city';
-	        //$this->layout = 'ajax'; 
-
-         }
-
-   
+	}
 
 /**
  * edit method
@@ -103,10 +97,10 @@ class CitiesController extends AppController {
 		}
 		if ($this->request->is(array('post', 'put'))) {
 			if ($this->City->save($this->request->data)) {
-				$this->Session->setFlash(__('The city has been saved.'));
+				$this->Session->setFlash(__('The city has been saved.'), 'default', array('class' => 'alert alert-success'));
 				return $this->redirect(array('action' => 'index'));
 			} else {
-				$this->Session->setFlash(__('The city could not be saved. Please, try again.'));
+				$this->Session->setFlash(__('The city could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 			}
 		} else {
 			$options = array('conditions' => array('City.' . $this->City->primaryKey => $id));
@@ -126,11 +120,11 @@ class CitiesController extends AppController {
 		if (!$this->City->exists()) {
 			throw new NotFoundException(__('Invalid city'));
 		}
-		$this->request->allowMethod('post', 'delete');
+		$this->request->onlyAllow('post', 'delete');
 		if ($this->City->delete()) {
-			$this->Session->setFlash(__('The city has been deleted.'));
+			$this->Session->setFlash(__('The city has been deleted.'), 'default', array('class' => 'alert alert-success'));
 		} else {
-			$this->Session->setFlash(__('The city could not be deleted. Please, try again.'));
+			$this->Session->setFlash(__('The city could not be deleted. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
