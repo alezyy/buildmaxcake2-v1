@@ -70,7 +70,7 @@ class CitiesController extends AppController {
 		// $countries = $this->City->Country->find('list');
 		
 				$this->loadModel('Country');         
-	                        $this->loadModel('State');
+                                $this->loadModel('State');
 
                 $this->set('countries', $this->Country->find('list')); 
 

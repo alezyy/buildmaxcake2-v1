@@ -53,9 +53,7 @@
 					<?php echo $this->Form->input('last_name', array('class' => 'form-control', 'placeholder' => 'Last Name'));?>
 				</div>
 				<div class="form-group">
-					<?php echo $this->Form->input('gender_id', array('label'=>__('Choose Gender'),
-                                                            'empty'=>__('Select Gender'),
-                                 'options'=>$genders, 'selected'=>false,'class' => 'form-control', 'placeholder' => 'Gender Id'));?>
+					<?php echo $this->Form->input('gender_id', array('class' => 'form-control', 'placeholder' => 'Gender Id'));?>
 				</div>
 				<div class="form-group">
 					<?php echo $this->Form->input('id_government', array('class' => 'form-control', 'placeholder' => 'Id Government'));?>

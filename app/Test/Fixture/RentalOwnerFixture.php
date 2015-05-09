@@ -62,8 +62,8 @@ class RentalOwnerFixture extends CakeTestFixture {
 			'zip' => 'Lorem ipsum dolor ',
 			'comments' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'photo' => 'Lorem ipsum dolor sit amet',
-			'created' => '2015-05-08 13:25:40',
-			'modified' => '2015-05-08 13:25:40'
+			'created' => '2015-05-08 17:44:34',
+			'modified' => '2015-05-08 17:44:34'
 		),
 	);
 

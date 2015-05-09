@@ -113,7 +113,27 @@ class StatesController extends AppController {
 
 
                                               $this->set('states', $states); 
-                                              $this->layout = 'ajax'; }
+                                              $this->layout = 'ajax';
+
+			}
+
+
+		 public function getByState1() { 
+
+	  $country_id = $this->request->data['RentalOwner']['country_id'];
+	  $states = $this->State->find('list', array( 'conditions' => array('State.country_id' =>     
+                                                                              $country_id), 
+                                                      'fields'=>array('id','state'),
+                                                      'recursive' => -1));
+
+
+                                              $this->set('states', $states); 
+                                              $this->layout = 'ajax'; 
+
+			}
 
 
 }
+
+
+

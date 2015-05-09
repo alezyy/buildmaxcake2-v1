@@ -1,3 +1,21 @@
+<?php
+  $this->Js->get('#RentalOwnerCountryId')->event('change', 
+    $this->Js->request(array(
+        'controller'=>'states',
+        'action'=>'getByState_rentalowner'
+        ), array(
+        'update'=>'#RentalOwnerStateId',
+        'async' => true,
+        'method' => 'post',
+        'dataExpression'=>true,
+        'data'=> $this->Js->serializeForm(array(
+            'isForm' => true,
+            'inline' => true
+            ))
+        ))
+    );
+
+?>
 
 
 <div class="states form">

@@ -1,114 +1,178 @@
 <div class="rentalOwners view">
-<h2><?php echo __('Rental Owner'); ?></h2>
-	<dl>
-		<dt><?php echo __('Id'); ?></dt>
-		<dd>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="page-header">
+				<h1><?php echo __('Rental Owner'); ?></h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-3">
+			<div class="actions">
+				<div class="panel panel-default">
+					<div class="panel-heading">Actions</div>
+						<div class="panel-body">
+							<ul class="nav nav-pills nav-stacked">
+									<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-edit"></span>&nbsp&nbsp;Edit Rental Owner'), array('action' => 'edit', $rentalOwner['RentalOwner']['id']), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Form->postLink(__('<span class="glyphicon glyphicon-remove"></span>&nbsp;&nbsp;Delete Rental Owner'), array('action' => 'delete', $rentalOwner['RentalOwner']['id']), array('escape' => false), __('Are you sure you want to delete # %s?', $rentalOwner['RentalOwner']['id'])); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-list"></span>&nbsp&nbsp;List Rental Owners'), array('action' => 'index'), array('escape' => false)); ?> </li>
+		<li><?php echo $this->Html->link(__('<span class="glyphicon glyphicon-plus"></span>&nbsp&nbsp;New Rental Owner'), array('action' => 'add'), array('escape' => false)); ?> </li>
+							</ul>
+						</div><!-- end body -->
+				</div><!-- end panel -->
+			</div><!-- end actions -->
+		</div><!-- end col md 3 -->
+
+		<div class="col-md-9">			
+			<table cellpadding="0" cellspacing="0" class="table table-striped">
+				<tbody>
+				<tr>
+		<th><?php echo __('Id'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('First Name'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('First Name'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['first_name']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Last Name'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Last Name'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['last_name']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Gender Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Gender Id'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['gender_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Id Government'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Id Government'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['id_government']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Company Name'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Company Name'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['company_name']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Date Of Birth'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Date Of Birth'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['date_of_birth']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Primary Email'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Primary Email'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['primary_email']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Alternate Email'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Alternate Email'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['alternate_email']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Phone'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Phone'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['phone']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Fax'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Fax'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['fax']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Street'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Street'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['street']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Country Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Country Id'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['country_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('State Id'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('State Id'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['state_id']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('City'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('City'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['city']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Zip'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Zip'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['zip']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Comments'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Comments'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['comments']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Photo'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Photo'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['photo']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Created'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Created'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['created']); ?>
 			&nbsp;
-		</dd>
-		<dt><?php echo __('Modified'); ?></dt>
-		<dd>
+		</td>
+</tr>
+<tr>
+		<th><?php echo __('Modified'); ?></th>
+		<td>
 			<?php echo h($rentalOwner['RentalOwner']['modified']); ?>
 			&nbsp;
-		</dd>
-	</dl>
+		</td>
+</tr>
+				</tbody>
+			</table>
+
+		</div><!-- end col md 9 -->
+
+	</div>
 </div>
-<div class="actions">
-	<h3><?php echo __('Actions'); ?></h3>
-	<ul>
-		<li><?php echo $this->Html->link(__('Edit Rental Owner'), array('action' => 'edit', $rentalOwner['RentalOwner']['id'])); ?> </li>
-		<li><?php echo $this->Form->postLink(__('Delete Rental Owner'), array('action' => 'delete', $rentalOwner['RentalOwner']['id']), array(), __('Are you sure you want to delete # %s?', $rentalOwner['RentalOwner']['id'])); ?> </li>
-		<li><?php echo $this->Html->link(__('List Rental Owners'), array('action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Rental Owner'), array('action' => 'add')); ?> </li>
-	</ul>
-</div>
+
